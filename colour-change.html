@@ -20,32 +20,13 @@
     <button id="b1" onclick="randomize()" type="button" class="btn btn-secondary">New Color</button>
   </div>
 
-<!-- <button id="b1" onclick="randomize()">Click Me!</button> -->
-
 </body>
 
 <script>
 
-  // var colors = ['#FF4D63', '#3848AC', '#513584', '#9D4075', '#4D7AFF', '#875EEF', '#525561'];
-  // var randomColor = colors[Math.floor(Math.random() * colors.length)];
-  // var pageColor = document.body;
-  // console.log(pageColor);
-  //
-  // var changeColor = function() {
-  //   console.log(randomColor);
-  //   pageColor.style.backgroundColor = randomColor;
-  //   console.log("got here");
-  // };
-  //
-  // changeColor();
-
   function randomize() {
   document.body.style.backgroundColor = randomColors();
 }
-
-
-// random colors - taken from here:
-// http://www.paulirish.com/2009/random-hex-color-code-snippets/
 
 function randomColors() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
