@@ -9,15 +9,48 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="jquery-3.1.1.min.js"></script>
 <head>
 <meta charset="UTF-8">
 <title>Color Changing Festiveness</title>
 </head>
 
-<body>
+<body id="body">
   <div class="col-md-4 center-block">
-    <button type="button" class="btn btn-primary">New Color</button>
+    <button id="b1" onclick="randomize()" type="button" class="btn btn-secondary">New Color</button>
   </div>
+
+<!-- <button id="b1" onclick="randomize()">Click Me!</button> -->
+
 </body>
+
+<script>
+
+  // var colors = ['#FF4D63', '#3848AC', '#513584', '#9D4075', '#4D7AFF', '#875EEF', '#525561'];
+  // var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  // var pageColor = document.body;
+  // console.log(pageColor);
+  //
+  // var changeColor = function() {
+  //   console.log(randomColor);
+  //   pageColor.style.backgroundColor = randomColor;
+  //   console.log("got here");
+  // };
+  //
+  // changeColor();
+
+  function randomize() {
+  document.body.style.backgroundColor = randomColors();
+}
+
+
+// random colors - taken from here:
+// http://www.paulirish.com/2009/random-hex-color-code-snippets/
+
+function randomColors() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
+
+</script>
 
 </html>
